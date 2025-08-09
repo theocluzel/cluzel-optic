@@ -19,8 +19,80 @@
   }
 }
 
+html { scroll-behavior: smooth; }
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+@keyframes slideIn { from { transform: translateX(-100%);} to { transform: translateX(0);} }
+@keyframes spin { from { transform: rotate(0deg);} to { transform: rotate(360deg);} }
+@keyframes pulse { 0%,100% { opacity: 1;} 50% { opacity: .5;} }
+@keyframes shine { 0% { background-position: -200% center;} 100% { background-position: 200% center;} }
+
+.animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+.animate-slide-in { animation: slideIn .5s ease-out forwards; }
+.animate-spin-slow { animation: spin 3s linear infinite; }
+.animate-pulse { animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite; }
+.animate-shine { animation: shine 3s linear infinite; background-size: 200% auto; }
+
+.hover\:scale-102:hover { transform: scale(1.02); }
+
+/* Styles pour les lunettes qui tournent */
+.spinning-glasses { transition: transform .3s ease-out; }
+.spinning-glasses:hover { transform: scale(1.1); }
+
+/* Styles personnalisés pour les cartes */
+.card-hover { transition: all .3s ease; }
+.card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,.1); }
+
+/* Styles pour les boutons */
+.btn-primary { @apply bg-blue-600 text-white px-6 py-2 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:scale-105; }
+.btn-secondary { @apply border-2 border-blue-600 text-blue-600 px-6 py-2 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:scale-105; }
+
+/* Styles pour les liens */
+.link-hover { @apply transition-colors duration-300 hover:text-blue-600; }
+
+/* Styles pour les sections */
+.section-padding { @apply py-20; }
+.section-title { @apply text-3xl font-semibold text-center mb-16; }
+
+/* Styles pour les cartes de services */
+.service-card { @apply bg-white rounded-xl shadow-lg p-8 transition-all duration-300 hover:scale-105; }
+
+/* Styles pour les images */
+.image-hover { @apply transition-transform duration-300 hover:scale-105; }
+
+/* Texte bois clair pour les titres */
+.wood-text {
+  background-image: url('/images/bois claire.jpg');
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: saturate(1.05) contrast(1.05);
+  text-shadow: 0 1px 1px rgba(0,0,0,.25);
+}
+
+/* Fond bois clair réutilisable (version d'origine) */
+.wood-bg {
+  background-image: url('/images/bois claire.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Effet LED (néon) plus blanc (moins jaune) pour titres */
+@keyframes neonPulseWhite {
+  from { text-shadow: 0 0 2px rgba(255,255,255,.9), 0 0 6px rgba(255,255,255,.6), 0 0 10px rgba(255,255,255,.4); }
+  to   { text-shadow: 0 0 4px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,.85), 0 0 22px rgba(255,255,255,.55), 0 0 34px rgba(255,255,255,.45); }
+}
+.neon-warm { color: #ffffff; letter-spacing: .01em; text-shadow: 0 0 4px rgba(255,255,255,1), 0 0 10px rgba(255,255,255,.85), 0 0 22px rgba(255,255,255,.55), 0 0 34px rgba(255,255,255,.45); animation: neonPulseWhite 2.8s ease-in-out infinite alternate; }
