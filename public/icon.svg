@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="32" height="32" rx="6" fill="#004C97"/>
-  <text x="16" y="22" font-family="Arial" font-weight="bold" font-size="20" fill="white" text-anchor="middle">
-    M
-  </text>
-</svg> 
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="6" fill="url(#g)"/>
+  <!-- Icône lunettes minimaliste -->
+  <g fill="none" stroke="#E5E7EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- pont -->
+    <path d="M12 15.5 C13 14.5, 19 14.5, 20 15.5"/>
+    <!-- cercle gauche -->
+    <circle cx="9.5" cy="18" r="4"/>
+    <!-- cercle droit -->
+    <circle cx="22.5" cy="18" r="4"/>
+    <!-- branches courtes -->
+    <path d="M5.5 17.5 L3.5 17"/>
+    <path d="M26.5 17.5 L28.5 17"/>
+  </g>
+</svg>
