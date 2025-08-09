@@ -30,7 +30,7 @@ function loadGoogleMaps(apiKey: string): Promise<void> {
     }
     const script = document.createElement("script");
     script.id = "google-maps-js";
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&v=quarterly&language=fr`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&v=quarterly&language=fr&libraries=maps`;
     script.async = true;
     script.defer = true;
     script.onload = () => resolve();

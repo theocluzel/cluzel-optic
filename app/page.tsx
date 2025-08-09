@@ -29,7 +29,9 @@ export default function Home() {
     <PageTransitionGlasses>
       <div className="min-h-screen bg-neutral-900 text-neutral-100">
         <Navbar />
-        <SpinningGlasses />
+        <div className="hidden md:block">
+          <SpinningGlasses />
+        </div>
         <main>
           {/* Hero Section avec image */}
           <section className="relative h-screen">
@@ -39,9 +41,8 @@ export default function Home() {
                 alt="Devanture L'Atelier du 15ème"
                 fill
                 sizes="100vw"
-                quality={100}
+                quality={75}
                 priority
-                unoptimized
                 className="object-cover brightness-90"
                 style={{ objectPosition: 'center 25%' }}
               />

@@ -7,6 +7,9 @@ const nextConfig = {
     // Déploie même s'il y a des erreurs ESLint (nous corrigerons ensuite)
     ignoreDuringBuilds: true,
   },
+  experimental: {
+    optimizePackageImports: ['framer-motion'],
+  },
 }
 
 module.exports = nextConfig 
