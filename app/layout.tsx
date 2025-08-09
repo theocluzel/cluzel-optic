@@ -13,8 +13,53 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Optique Monnery - Votre Opticien à Paris",
-  description: "Opticien de confiance à Paris depuis 1977. Lunettes de vue, solaires et lentilles de contact. Trois boutiques dans le 7ème et 15ème arrondissement.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://fastidious-fox-d409c6.netlify.app'),
+  title: {
+    default: "L'Atelier du 15ème – Opticien lunetier créateur à Paris 15",
+    template: "%s | L'Atelier du 15ème",
+  },
+  description:
+    "Opticien lunetier créateur à Paris 15. Lunettes de vue, solaires, lentilles de contact, verres progressifs, conseils personnalisés. Made in France.",
+  keywords: [
+    "opticien Paris 15",
+    "opticien lunetier",
+    "lunettes de vue",
+    "lunettes de soleil",
+    "lentilles de contact",
+    "verres progressifs",
+    "atelier du 15ème",
+  ],
+  openGraph: {
+    type: 'website',
+    locale: 'fr_FR',
+    siteName: "L'Atelier du 15ème",
+    title: "L'Atelier du 15ème – Opticien lunetier créateur à Paris 15",
+    description:
+      "Opticien lunetier créateur à Paris 15. Lunettes de vue, solaires, lentilles de contact, verres progressifs, conseils personnalisés.",
+    url: '/',
+    images: [
+      {
+        url: '/images/atelier-15eme-storefront.jpg',
+        width: 1200,
+        height: 630,
+        alt: "Devanture L'Atelier du 15ème",
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "L'Atelier du 15ème – Opticien lunetier créateur à Paris 15",
+    description:
+      "Opticien lunetier créateur à Paris 15. Lunettes de vue, solaires, lentilles de contact, verres progressifs, conseils personnalisés.",
+    images: ['/images/atelier-15eme-storefront.jpg'],
+  },
+  alternates: {
+    canonical: '/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
@@ -22,6 +67,7 @@ export const metadata: Metadata = {
       { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
       { url: '/favicon.ico', sizes: '48x48' },
     ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
 };
 

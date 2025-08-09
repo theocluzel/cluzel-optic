@@ -21,6 +21,11 @@ async function generateFavicon() {
       .resize(48, 48)
       .toFile(path.join(__dirname, '../public/favicon.ico'));
 
+    // Générer l'icône iOS (apple-touch-icon)
+    await sharp(svgBuffer)
+      .resize(180, 180)
+      .toFile(path.join(__dirname, '../public/apple-touch-icon.png'));
+
     console.log('Favicon généré avec succès !');
   } catch (error) {
     console.error('Erreur lors de la génération du favicon:', error);
