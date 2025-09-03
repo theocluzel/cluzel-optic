@@ -84,10 +84,16 @@ body {
 
 /* Fond bois clair réutilisable (version d'origine) */
 .wood-bg {
-  background-image: url('/images/bois claire.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* 1er calque: texture bois seamless HD (1x/2x). 2e calque: fallback ancien visuel. */
+  background-image:
+    image-set(
+      url('/images/wood-seamless.jpg') 1x,
+      url('/images/wood-seamless@2x.jpg') 2x
+    ),
+    url('/images/bois claire.jpg');
+  background-repeat: repeat, no-repeat;
+  background-position: top left, center;
+  background-size: 512px 512px, cover;
 }
 
 /* Effet LED (néon) plus blanc (moins jaune) pour titres */
