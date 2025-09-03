@@ -248,23 +248,12 @@ export default function Home() {
               <div className="max-w-3xl mx-auto">
                 <div className="rounded-2xl overflow-hidden border border-neutral-800 shadow-xl wood-bg">
                   <div className="p-6 md:p-8">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 text-neutral-200">
-                      {[
-                        ['Lundi', "10h00 – 13h00 / 14h00 – 19h00"],
-                        ['Mardi', "10h00 – 13h00 / 14h00 – 19h00"],
-                        ['Mercredi', "10h00 – 13h00 / 14h00 – 19h00"],
-                        ['Jeudi', "10h00 – 13h00 / 14h00 – 19h00"],
-                        ['Vendredi', "10h00 – 13h00 / 14h00 – 19h00"],
-                        ['Samedi', "10h00 – 13h00 / 14h00 – 19h00"],
-                        ['Dimanche', "Fermé"],
-                      ].map(([jour, heures]) => (
-                        <div key={jour as string} className="flex items-center justify-between bg-neutral-900 rounded-lg border border-neutral-800 px-4 py-3">
-                          <span className="font-semibold text-white">{jour as string}</span>
-                          <span className="text-neutral-300">{heures as string}</span>
-                        </div>
-                      ))}
+                    <div className="flex items-center justify-center">
+                      <div className="w-full text-center bg-neutral-900 rounded-lg border border-neutral-800 px-6 py-5">
+                        <p className="text-white font-semibold text-lg md:text-xl">Du lundi au samedi — 10h à 19h</p>
+                      </div>
                     </div>
-                    <p className="mt-6 text-sm text-neutral-400">Horaires susceptibles d’évoluer les jours fériés.</p>
+                    <p className="mt-6 text-sm text-neutral-400 text-center">Horaires susceptibles d’évoluer les jours fériés.</p>
                   </div>
                 </div>
               </div>
