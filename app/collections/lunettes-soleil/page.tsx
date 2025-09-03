@@ -16,11 +16,13 @@ export default function LunettesSoleil() {
 
   return (
     <PageTransitionGlasses>
-      <div className="min-h-screen" style={{ backgroundImage: "url('/images/bois claire.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="min-h-screen bg-neutral-900">
         <Navbar />
         <main className="pt-20">
           <BlueTitle title="Lunettes de Soleil" subtitle="Découvrez nos sélections par marques" variant="black" />
 
+          {/* Contenu sous le titre sur fond bois */}
+          <div style={{ backgroundImage: "url('/images/bois claire.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
           {sections.map((section) => {
             const logo = `${section.basePath}/${section.files[0]}`;
             const others = section.files.slice(1).map((f) => `${section.basePath}/${f}`);
@@ -50,6 +52,7 @@ export default function LunettesSoleil() {
               </section>
             );
           })}
+          </div>
         </main>
         <Footer />
       </div>
