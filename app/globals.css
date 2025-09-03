@@ -85,9 +85,23 @@ body {
 /* Fond bois clair réutilisable (version d'origine) */
 .wood-bg {
   background-image: url('/images/bois claire.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* Motif répétitif pour éviter l'effet zoom/flou sur grands écrans */
+  background-repeat: repeat;
+  background-position: top left;
+  /* Taille de motif par défaut (mobile) */
+  background-size: 300px auto;
+}
+
+@media (min-width: 640px) {
+  .wood-bg {
+    background-size: 360px auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wood-bg {
+    background-size: 420px auto;
+  }
 }
 
 /* Effet LED (néon) plus blanc (moins jaune) pour titres */
