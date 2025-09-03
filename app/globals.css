@@ -82,6 +82,17 @@ body {
   text-shadow: 0 1px 1px rgba(0,0,0,.25);
 }
 
+/* Fond "papier" grain léger pour cartes produits (Option B) */
+.paper-bg {
+  background-color: #f6f6f7;
+  background-image:
+    radial-gradient(rgba(0,0,0,0.035) 1px, transparent 1.5px),
+    radial-gradient(rgba(0,0,0,0.02) 0.5px, transparent 1px);
+  background-size: 12px 12px, 6px 6px;
+  background-position: 0 0, 3px 3px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.65), inset 0 -1px 0 rgba(0,0,0,0.06);
+}
+
 /* Fond bois clair réutilisable (version d'origine) */
 .wood-bg {
   /* 1er calque: texture bois seamless HD (1x/2x). 2e calque: fallback ancien visuel. */
