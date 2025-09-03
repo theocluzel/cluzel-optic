@@ -77,6 +77,9 @@ export const metadata: Metadata = {
 // Désactive la revalidation ISR globale (les routes dynamiques peuvent surcharger)
 export const revalidate = 0;
 
+// Force le rendu dynamique (évite la mise en cache HTML/CDN)
+export const dynamic = 'force-dynamic';
+
 export default function RootLayout({
   children,
 }: Readonly<{
