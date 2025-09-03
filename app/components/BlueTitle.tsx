@@ -56,16 +56,16 @@ export default function BlueTitle({ title, subtitle, subtitleIsWood = false, var
         />
         <div className="container mx-auto px-4 relative z-10">
           <motion.h1 
-            className="text-5xl font-bold text-center mb-3 tracking-wide"
+            className="text-5xl font-bold text-center mb-3 tracking-wide text-black"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="wood-text">{title}</span>
+            {title}
           </motion.h1>
           {subtitle && (
             <motion.p 
-              className={`text-lg md:text-xl text-center ${subtitleIsWood ? 'wood-text' : 'text-neutral-100/95'}`}
+              className="text-lg md:text-xl text-center text-black"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.1 }}
