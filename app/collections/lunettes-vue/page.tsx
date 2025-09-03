@@ -31,14 +31,16 @@ export default function LunettesVue() {
             return (
               <section key={section.marque} className="py-12">
                 <div className="container mx-auto px-4">
-                  {/* Logo centré sans encadrement */}
+                  {/* Logo de marque sur plaque bois (comme Enfant) */}
                   <div className="flex justify-center mb-8">
-                    <div className="relative w-48 h-24 md:w-64 md:h-32">
-                      <Image src={logo} alt={`${section.marque} logo`} fill className="object-contain" />
+                    <div className="wood-bg rounded-2xl px-6 py-4 shadow-lg border border-neutral-800/30">
+                      <div className="relative w-48 h-24 md:w-64 md:h-32">
+                        <Image src={logo} alt={`${section.marque} logo`} fill className="object-contain" />
+                      </div>
                     </div>
                   </div>
-                  {/* Grille des modèles sur fond noir, avec encadrement bois type vitrine */}
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 place-items-center">
+                  {/* Grille 2 colonnes centrées (1 sur mobile), cadres vitrine */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 place-items-center justify-items-center">
                     {others.map((src, idx) => (
                       <motion.div
                         key={src}
