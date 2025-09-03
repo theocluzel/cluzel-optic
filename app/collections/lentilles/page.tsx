@@ -28,13 +28,14 @@ export default function Lentilles() {
 
   return (
     <PageTransitionGlasses>
-      <div className="min-h-screen" style={{ backgroundImage: "url('/images/bois claire.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="min-h-screen bg-neutral-900">
         <Navbar />
         <main className="pt-20">
           <BlueTitle 
             title="Lentilles de Contact"
             subtitle="Liberté et confort au quotidien"
             variant="black"
+            titleIsWood
           />
           
           <section className="py-16">
