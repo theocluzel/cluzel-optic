@@ -10,9 +10,6 @@ import BlueTitle from './components/BlueTitle';
 import StreetViewModal from './components/StreetViewModal';
 import { useMemo, useState } from 'react';
 
-// Désactive la revalidation ISR pour empêcher le cache HTML côté CDN
-export const revalidate = 0;
-
 export default function Home() {
   const [isImmersionOpen, setIsImmersionOpen] = useState(false);
 
