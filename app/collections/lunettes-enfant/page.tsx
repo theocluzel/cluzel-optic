@@ -20,8 +20,6 @@ export default function LunettesEnfant() {
         <main className="pt-20">
           <BlueTitle title="Lunettes Enfant" subtitle="Confort, solidité et styles adaptés" variant="black" titleIsWood />
 
-          {/* Contenu sous le titre sur fond bois */}
-          <div style={{ backgroundImage: "url('/images/bois claire.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
           {sections.map((section) => {
             const logo = `${section.basePath}/${section.files[0]}`;
             const others = section.files.slice(1).map((f) => `${section.basePath}/${f}`);
@@ -33,9 +31,7 @@ export default function LunettesEnfant() {
                       <Image src={logo} alt={`${section.marque} logo`} fill className="object-contain" />
                     </div>
                   </div>
-                  {/* Séparateur bois discret */}
-                  <div className="h-1 wood-bg rounded-full w-24 md:w-32 mx-auto mb-8"></div>
-                  {/* Grille plus légère, cartes noires pour éviter l'effet scolaire */}
+                  {/* Grille sur fond noir avec encadrement bois type vitrine */}
                   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 place-items-center">
                     {others.map((src, idx) => (
                       <motion.div
@@ -44,9 +40,11 @@ export default function LunettesEnfant() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.35, delay: idx * 0.05 }}
-                    className="relative w-full max-w-[260px] aspect-[4/3] overflow-hidden bg-neutral-900 rounded-xl border border-neutral-800 p-3 shadow-lg"
+                    className="relative w-full max-w-[260px] aspect-[4/3] rounded-xl shadow-lg wood-bg p-2 border border-neutral-800/20"
                       >
-                        <Image src={src} alt={`${section.marque} modèle ${idx + 2}`} fill className="object-contain" />
+                        <div className="relative w-full h-full bg-neutral-900 rounded-lg border border-neutral-800 overflow-hidden">
+                          <Image src={src} alt={`${section.marque} modèle ${idx + 2}`} fill className="object-contain" />
+                        </div>
                       </motion.div>
                     ))}
                   </div>
@@ -54,7 +52,6 @@ export default function LunettesEnfant() {
               </section>
             );
           })}
-          </div>
         </main>
         <Footer />
       </div>
