@@ -51,8 +51,9 @@ export default function LunettesVue() {
                     className="relative w-full max-w-[260px] aspect-[4/3] rounded-xl shadow-lg wood-bg p-2 border border-neutral-800/20"
                       >
                         <div
-                          className="relative w-full h-full rounded-lg border overflow-hidden bg-white"
+                          className="relative w-full h-full rounded-lg border overflow-hidden"
                           style={{
+                            backgroundColor: '#f3f4f6',
                             borderColor: '#e5e7eb',
                             boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.75), inset 0 -1px 0 rgba(0,0,0,0.06)'
                           }}
