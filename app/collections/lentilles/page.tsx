@@ -37,25 +37,28 @@ export default function Lentilles() {
             variant="black"
             titleIsWood
           />
-          
-          <section className="py-16">
-            <div className="container mx-auto px-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {marques.map((marque, idx) => (
-                  <motion.div
-                    key={marque.nom}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: idx * 0.1 }}
-                    className="bg-neutral-900 rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-102 border border-neutral-800"
-                  >
-                    <h3 className="text-xl font-semibold mb-2 text-white">{marque.nom}</h3>
-                    <p className="text-neutral-300">{marque.description}</p>
-                  </motion.div>
-                ))}
+
+          {/* Fond bois sous le titre uniquement */}
+          <div style={{ backgroundImage: "url('/images/bois claire.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <section className="py-16">
+              <div className="container mx-auto px-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {marques.map((marque, idx) => (
+                    <motion.div
+                      key={marque.nom}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: idx * 0.1 }}
+                      className="bg-neutral-900 rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-102 border border-neutral-800"
+                    >
+                      <h3 className="text-xl font-semibold mb-2 text-white">{marque.nom}</h3>
+                      <p className="text-neutral-300">{marque.description}</p>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
         </main>
         <Footer />
       </div>
