@@ -5,9 +5,10 @@ interface BlueTitleProps {
   subtitle?: string;
   subtitleIsWood?: boolean;
   variant?: 'wood' | 'black';
+  titleIsWood?: boolean;
 }
 
-export default function BlueTitle({ title, subtitle, subtitleIsWood = false, variant = 'wood' }: BlueTitleProps) {
+export default function BlueTitle({ title, subtitle, subtitleIsWood = false, variant = 'wood', titleIsWood = false }: BlueTitleProps) {
   if (variant === 'black') {
     return (
       <section className="relative">
@@ -19,7 +20,7 @@ export default function BlueTitle({ title, subtitle, subtitleIsWood = false, var
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              {title}
+              {titleIsWood ? <span className="wood-text">{title}</span> : title}
             </motion.h1>
             {subtitle && (
               <motion.p 

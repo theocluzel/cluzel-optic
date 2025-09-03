@@ -23,7 +23,7 @@ export default function LunettesVue() {
       <div className="min-h-screen bg-neutral-900 text-neutral-900">
         <Navbar />
         <main className="pt-20">
-          <BlueTitle title="Lunettes de Vue" subtitle="Découvrez nos sélections par marques" variant="black" />
+          <BlueTitle title="Lunettes de Vue" subtitle="Découvrez nos sélections par marques" variant="black" titleIsWood />
 
           {/* Contenu sous le titre sur fond bois */}
           <div style={{ backgroundImage: "url('/images/bois claire.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
