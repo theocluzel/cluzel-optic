@@ -10,6 +10,9 @@ import BlueTitle from './components/BlueTitle';
 import StreetViewModal from './components/StreetViewModal';
 import { useMemo, useState } from 'react';
 
+// Désactive la revalidation ISR pour empêcher le cache HTML côté CDN
+export const revalidate = 0;
+
 export default function Home() {
   const [isImmersionOpen, setIsImmersionOpen] = useState(false);
 
@@ -25,6 +28,8 @@ export default function Home() {
     }
   }, []);
 
+  // Désactive le cache côté Next pour la page d’accueil (ISR off)
+  // Note: pour l’App Router, on peut aussi exporter const revalidate = 0;
   return (
     <PageTransitionGlasses>
       <div className="min-h-screen bg-neutral-900 text-neutral-100">
