@@ -53,7 +53,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
             <div className="absolute inset-0 flex flex-col justify-end items-start px-8 md:px-16 pb-24 md:pb-32">
               <div className="max-w-4xl space-y-4">
-                <h2 className="neon-warm text-3xl md:text-5xl font-extrabold leading-tight">
+                <h2 className="text-white text-3xl md:text-5xl font-extrabold leading-tight">
                   Opticien lunetier créateur
                 </h2>
                 <p className="text-base md:text-lg text-white/95">
