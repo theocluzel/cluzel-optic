@@ -159,7 +159,7 @@ export default function Home() {
                 >
                   <div className="aspect-[4/3] relative bg-neutral-700">
                     <Image
-                      src="/images/lunettesenfant2.jpg"
+                      src="/images/lunettesenfant2.jpg?v=1"
                       alt="Lunettes Enfant"
                       fill
                       className="object-cover"
