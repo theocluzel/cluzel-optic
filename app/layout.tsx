@@ -23,6 +23,17 @@ export const metadata: Metadata = {
   keywords: [
     "opticien Paris 15",
     "opticien lunetier",
+    "opticien créateur",
+    "opticien 15ème",
+    "opticien 15e",
+    "opticien paris quinzième",
+    "atelier du 15eme",
+    "atelier du 15e",
+    "atelier du 15ème",
+    "opticien paris 15ème",
+    "opticien paris 15e",
+    "magasin de lunettes paris 15",
+    "lunettes créateurs paris",
     "lunettes de vue",
     "lunettes de soleil",
     "lentilles de contact",
@@ -85,9 +96,40 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fastidious-fox-d409c6.netlify.app';
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "L'Atelier du 15ème",
+    "description": "Opticien lunetier créateur à Paris 15: lunettes de vue, solaires, lentilles, verres progressifs et conseils personnalisés.",
+    "url": siteUrl,
+    "telephone": "+33 1 45 75 29 47",
+    "email": "atelierdu15eme@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "138 Bd de Grenelle",
+      "addressLocality": "Paris",
+      "postalCode": "75015",
+      "addressCountry": "FR"
+    },
+    "image": [
+      `${siteUrl}/images/atelier-15eme-storefront.jpg`
+    ],
+    "sameAs": [
+      "https://www.instagram.com/atelier_du_15eme/"
+    ],
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "13:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "14:00", "closes": "19:00" }
+    ],
+  };
   return (
     <html lang="fr">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         {children}
       </body>
     </html>
