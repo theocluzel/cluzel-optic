@@ -12,7 +12,6 @@ export default function Footer() {
               <h3 className="text-lg font-semibold mb-4 text-white">Nos horaires</h3>
               <p className="mb-2">Mardi au Samedi</p>
               <p className="mb-2">10h00 – 13h00 et 14h00 – 19h00</p>
-              <p className="mb-2 text-neutral-400">Lundi fermé</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4 text-white">Contact</h3>

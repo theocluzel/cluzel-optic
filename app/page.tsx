@@ -253,7 +253,6 @@ export default function Home() {
                     <div className="flex items-center justify-center">
                       <div className="w-full text-center bg-neutral-900 rounded-lg border border-neutral-800 px-6 py-5">
                         <p className="text-white font-semibold text-lg md:text-xl">Mardi au samedi — 10h à 13h et 14h à 19h</p>
-                        <p className="mt-2 text-neutral-300">Lundi fermé</p>
                       </div>
                     </div>
                     <p className="mt-6 text-sm text-neutral-400 text-center">Horaires susceptibles d’évoluer les jours fériés.</p>
