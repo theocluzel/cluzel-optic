@@ -143,15 +143,56 @@ export default function RootLayout({
         )}
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}></script>
+            <script
+              id="gcm-default"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);} 
+                  gtag('consent', 'default', {
+                    ad_storage: 'denied',
+                    analytics_storage: 'denied',
+                    functionality_storage: 'denied',
+                    personalization_storage: 'denied',
+                    security_storage: 'granted'
+                  });
+                `,
+              }}
+            />
+            <script
+              type="text/plain"
+              data-cookieconsent="statistics"
+              data-src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+            />
             <script
               id="gtag-init"
+              type="text/plain"
+              data-cookieconsent="statistics"
               dangerouslySetInnerHTML={{
                 __html: `
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);} 
                   gtag('js', new Date());
                   gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', { send_page_view: false });
+                `,
+              }}
+            />
+            <script
+              id="cookiebot-gcm-sync"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  function updateGcmFromCookiebot() {
+                    if (!window.Cookiebot || typeof gtag !== 'function') return;
+                    gtag('consent', 'update', {
+                      ad_storage: Cookiebot.consent.marketing ? 'granted' : 'denied',
+                      analytics_storage: Cookiebot.consent.statistics ? 'granted' : 'denied',
+                      functionality_storage: Cookiebot.consent.preferences ? 'granted' : 'denied',
+                      personalization_storage: 'denied',
+                      security_storage: 'granted'
+                    });
+                  }
+                  window.addEventListener('CookiebotOnAccept', updateGcmFromCookiebot);
+                  window.addEventListener('CookiebotOnDecline', updateGcmFromCookiebot);
                 `,
               }}
             />
