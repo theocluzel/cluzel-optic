@@ -39,7 +39,7 @@ export default function Home() {
           <section className="relative h-screen">
             <div className="absolute inset-0">
               <Image
-                src="/images/exterieur clear.jpeg"
+                src="/images/photo magasin 2.jpg?v=1"
                 alt="Devanture L'Atelier du 15ème"
                 fill
                 sizes="100vw"
