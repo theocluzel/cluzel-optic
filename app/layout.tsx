@@ -126,6 +126,10 @@ export default function RootLayout({
   };
   return (
     <html lang="fr">
+      <head>
+        {/* Google Search Console verification */}
+        <meta name="google-site-verification" content="nCvxACMAXGqsJXcTf1QtM6fSaNusyZCtJyRRpqULy-c" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* Cookiebot: bloque les scripts jusqu'au consentement (auto) */}
         {process.env.NEXT_PUBLIC_COOKIEBOT_ID && (
