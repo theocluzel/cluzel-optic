@@ -45,7 +45,7 @@ export default function LunettesSoleil() {
                     className="relative w-full max-w-[260px] aspect-video sm:aspect-[4/3] rounded-xl shadow-lg wood-bg p-3 border border-neutral-800/20 overflow-hidden"
                       >
                         <div
-                          className="relative w-full h-[97%] sm:h-full -translate-y-1 sm:translate-y-0 rounded-lg border overflow-hidden bg-white"
+                          className="relative w-full h-[92%] sm:h-full rounded-lg border overflow-hidden bg-white"
                           style={{
                             borderColor: '#e5e7eb',
                             boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.75), inset 0 -1px 0 rgba(0,0,0,0.06)'
@@ -53,6 +53,7 @@ export default function LunettesSoleil() {
                         >
                           <Image src={src} alt={`${section.marque} modèle ${idx + 2}`} fill className="object-contain" />
                         </div>
+                        {/* Espace bois visible en bas pour la finition pro */}
                       </motion.div>
                     ))}
                   </div>
