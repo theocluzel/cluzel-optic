@@ -20,7 +20,7 @@ export default function LunettesVue() {
 
   return (
     <PageTransitionGlasses>
-      <div className="min-h-screen bg-neutral-900 text-neutral-900">
+      <div className="min-h-screen bg-neutral-900">
         <Navbar />
         <main className="pt-20">
           <BlueTitle title="Lunettes de Vue" subtitle="Découvrez nos sélections par marques" variant="black" titleIsWood />
