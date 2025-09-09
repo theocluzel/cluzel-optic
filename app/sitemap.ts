@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fastidious-fox-d409c6.netlify.app'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://atelierdu15eme.fr'
   const routes = [
     '',
     '/collections/lunettes-vue',

@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://fastidious-fox-d409c6.netlify.app'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://atelierdu15eme.fr'),
   title: {
     default: "L'Atelier du 15ème – Opticien lunetier créateur à Paris 15",
     template: "%s | L'Atelier du 15ème",
@@ -67,6 +67,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: '/',
+    languages: {
+      'fr-FR': 'https://atelierdu15eme.fr',
+    },
   },
   robots: {
     index: true,
@@ -97,7 +100,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fastidious-fox-d409c6.netlify.app';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://atelierdu15eme.fr';
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -129,6 +132,12 @@ export default function RootLayout({
       <head>
         {/* Google Search Console verification */}
         <meta name="google-site-verification" content="nCvxACMAXGqsJXcTf1QtM6fSaNusyZCtJyRRpqULy-c" />
+        {/* Force canonical domain */}
+        <link rel="canonical" href="https://atelierdu15eme.fr" />
+        <meta property="og:url" content="https://atelierdu15eme.fr" />
+        <meta name="twitter:url" content="https://atelierdu15eme.fr" />
+        {/* Prevent indexing of old subdomain */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* Cookiebot: bloque les scripts jusqu'au consentement (auto) */}
