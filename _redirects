@@ -1,0 +1,2 @@
+# Redirection du sous-domaine Netlify vers le domaine principal
+fastidious-fox-d409c6.netlify.app/* https://atelierdu15eme.fr/:splat 301!
