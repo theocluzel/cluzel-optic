@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -134,7 +135,8 @@ export default function RootLayout({
     "name": "L'Atelier du 15ème",
     "alternateName": ["Atelier du 15ème", "Opticien Paris 15", "Opticien 15ème arrondissement"],
     "description": "L'Atelier du 15ème - Opticien lunetier créateur à Paris 15ème arrondissement. Lunettes de vue, solaires, lentilles de contact, verres progressifs. 138 Bd de Grenelle, 75015 Paris. Conseils personnalisés, Made in France.",
-    "url": siteUrl,
+    "url": "https://atelierdu15eme.fr/",
+    "mainEntityOfPage": "https://atelierdu15eme.fr/",
     "telephone": "+33 1 45 75 29 47",
     "email": "atelierdu15eme@gmail.com",
     "address": {
@@ -219,10 +221,13 @@ export default function RootLayout({
       <head>
         {/* Google Search Console verification */}
         <meta name="google-site-verification" content="nCvxACMAXGqsJXcTf1QtM6fSaNusyZCtJyRRpqULy-c" />
-        {/* Force canonical domain */}
-        <link rel="canonical" href="https://atelierdu15eme.fr" />
-        <meta property="og:url" content="https://atelierdu15eme.fr" />
-        <meta name="twitter:url" content="https://atelierdu15eme.fr" />
+                {/* Force canonical domain - MULTIPLE CANONICAL TAGS */}
+                <link rel="canonical" href="https://atelierdu15eme.fr/" />
+                <link rel="canonical" href="https://atelierdu15eme.fr" />
+                <meta property="og:url" content="https://atelierdu15eme.fr/" />
+                <meta name="twitter:url" content="https://atelierdu15eme.fr/" />
+                {/* Prevent old domain indexing */}
+                <meta name="robots" content="noindex, nofollow" data-domain="fastidious-fox-d409c6.netlify.app" />
         {/* Prevent indexing of old subdomain */}
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       </head>
