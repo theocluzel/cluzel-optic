@@ -47,7 +47,7 @@ export default function MonturesBioAcetate() {
                     <li><span className="font-semibold">Flexibilité</span> : malgré sa dureté, il est suffisamment malléable pour être ajusté, ce qui est essentiel pour les montures.</li>
                     <li><span className="font-semibold">Esthétique</span> : il offre une vaste gamme de couleurs et de motifs, grâce à sa capacité à bien retenir les teintes.</li>
                     <li><span className="font-semibold">Confort</span> : léger, il est agréable à porter.</li>
-                    <li><span className="font-semibold">Résistance à la chaleur</span> : il est stable sous une certaine chaleur, ce qui facilite les ajustements par des opticiens.</li>
+                    <li><span className="font-semibold">Résistance à la chaleur</span> : il est stable sous une certaine chaleur, ce qui facilite les ajustages par des opticiens.</li>
                   </ol>
                 </div>
 

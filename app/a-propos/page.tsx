@@ -34,7 +34,7 @@ export default function APropos() {
                 <p className="text-neutral-100 mb-2">L'Atelier du 15ème a ouvert ses portes en 2019.</p>
                 <p className="text-neutral-100 mb-2">Depuis nos débuts, nous avons à cœur d’offrir un accompagnement attentif, des conseils honnêtes et un suivi durable pour chaque client.</p>
                 <p className="text-neutral-100 mb-2">Nous travaillons avec des marques créatrices et privilégions les fabrications françaises lorsque cela est possible, pour conjuguer qualité, esthétisme et confort.</p>
-                <p className="text-neutral-100">Notre savoir‑faire couvre l’examen de vue, l’ajustement précis des montures, le choix des verres (dont progressifs) et l’entretien/réparation pour prolonger la vie de vos lunettes.</p>
+                <p className="text-neutral-100">Notre savoir‑faire couvre l'examen de vue, l'ajustage précis des montures, le choix des verres (dont progressifs) et l'entretien/réparation pour prolonger la vie de vos lunettes.</p>
               </div>
             </div>
           </section>
