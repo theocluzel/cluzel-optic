@@ -45,7 +45,7 @@ export default function APropos() {
               <div className="bg-neutral-900 rounded-xl border border-neutral-800 p-6 shadow-lg">
                 <h4 className="text-lg font-semibold text-white mb-3">Notre engagement</h4>
                 <p className="text-neutral-300">
-                  Nous proposons des produits fabriqués en France de haute qualité, des lentilles progressives pour une vision nette à toutes les distances
+                  Nous proposons des produits fabriqués en France et en Europe de haute qualité, des lentilles progressives pour une vision nette à toutes les distances
                   et des conseils d'experts pour garantir votre satisfaction visuelle.
                 </p>
               </div>
