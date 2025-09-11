@@ -185,9 +185,9 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="bg-neutral-800 rounded-xl shadow-lg p-8 transform transition-all duration-300 hover:scale-105 border border-neutral-700">
                   <div className="w-16 h-16 relative mb-6 mx-auto">
-                    <Image src="/images/reparation lunettes.jpg" alt="Ajustement" fill className="object-cover rounded-full" />
+                    <Image src="/images/reparation lunettes.jpg" alt="Ajustage" fill className="object-cover rounded-full" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-center wood-text drop-shadow">Ajustement</h3>
+                  <h3 className="text-xl font-bold mb-2 text-center wood-text drop-shadow">Ajustage</h3>
                   <p className="text-neutral-300 text-center">Réglage précis et adaptation de vos montures.</p>
                 </div>
                 <div className="bg-neutral-800 rounded-xl shadow-lg p-8 transform transition-all duration-300 hover:scale-105 border border-neutral-700">
