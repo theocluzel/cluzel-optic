@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | L'Atelier du 15ème",
   },
   description:
-    "Opticien lunetier créateur à Paris 15. Lunettes de vue, solaires, lentilles de contact, verres progressifs, conseils personnalisés. Made in France.",
+    "L'Atelier du 15ème - Opticien lunetier créateur à Paris 15ème arrondissement. Lunettes de vue, solaires, lentilles de contact, verres progressifs. 138 Bd de Grenelle, 75015 Paris. Conseils personnalisés, Made in France.",
   keywords: [
     "opticien Paris 15",
     "opticien lunetier",
@@ -40,14 +40,41 @@ export const metadata: Metadata = {
     "lentilles de contact",
     "verres progressifs",
     "atelier du 15ème",
+    "opticien paris",
+    "optique paris",
+    "opticien 15ème arrondissement",
+    "opticien paris 15ème arrondissement",
+    "lunettes paris 15",
+    "opticien grenelle",
+    "opticien boulevard grenelle",
+    "opticien 138 boulevard grenelle",
+    "opticien paris 75015",
+    "magasin lunettes paris 15ème",
+    "opticien paris centre",
+    "opticien paris 15ème arrondissement",
+    "lunettes vue paris 15",
+    "lunettes soleil paris 15",
+    "verres progressifs paris 15",
+    "lentilles contact paris 15",
+    "opticien paris 15ème arrondissement",
+    "atelier du 15ème opticien",
+    "atelier du 15ème paris",
+    "atelier du 15ème lunettes",
+    "opticien créateur paris 15",
+    "lunetier paris 15",
+    "opticien paris 15ème arrondissement",
+    "magasin optique paris 15",
+    "opticien paris 15ème arrondissement",
+    "opticien paris 15ème arrondissement",
+    "opticien paris 15ème arrondissement",
   ],
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
     siteName: "L'Atelier du 15ème",
-    title: "L'Atelier du 15ème – Opticien lunetier créateur à Paris 15",
+    title: "L'Atelier du 15ème – Opticien lunetier créateur à Paris 15ème arrondissement",
     description:
-      "Opticien lunetier créateur à Paris 15. Lunettes de vue, solaires, lentilles de contact, verres progressifs, conseils personnalisés.",
+      "L'Atelier du 15ème - Opticien lunetier créateur à Paris 15ème arrondissement. Lunettes de vue, solaires, lentilles de contact, verres progressifs. 138 Bd de Grenelle, 75015 Paris.",
     url: '/',
     images: [
       {
@@ -60,9 +87,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "L'Atelier du 15ème – Opticien lunetier créateur à Paris 15",
+    title: "L'Atelier du 15ème – Opticien lunetier créateur à Paris 15ème arrondissement",
     description:
-      "Opticien lunetier créateur à Paris 15. Lunettes de vue, solaires, lentilles de contact, verres progressifs, conseils personnalisés.",
+      "L'Atelier du 15ème - Opticien lunetier créateur à Paris 15ème arrondissement. Lunettes de vue, solaires, lentilles de contact, verres progressifs. 138 Bd de Grenelle, 75015 Paris.",
     images: ['/images/atelier-15eme-storefront.jpg'],
   },
   alternates: {
@@ -103,9 +130,10 @@ export default function RootLayout({
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://atelierdu15eme.fr';
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "Optician", "Store"],
     "name": "L'Atelier du 15ème",
-    "description": "Opticien lunetier créateur à Paris 15: lunettes de vue, solaires, lentilles, verres progressifs et conseils personnalisés.",
+    "alternateName": ["Atelier du 15ème", "Opticien Paris 15", "Opticien 15ème arrondissement"],
+    "description": "L'Atelier du 15ème - Opticien lunetier créateur à Paris 15ème arrondissement. Lunettes de vue, solaires, lentilles de contact, verres progressifs. 138 Bd de Grenelle, 75015 Paris. Conseils personnalisés, Made in France.",
     "url": siteUrl,
     "telephone": "+33 1 45 75 29 47",
     "email": "atelierdu15eme@gmail.com",
@@ -113,12 +141,29 @@ export default function RootLayout({
       "@type": "PostalAddress",
       "streetAddress": "138 Bd de Grenelle",
       "addressLocality": "Paris",
+      "addressRegion": "Île-de-France",
       "postalCode": "75015",
       "addressCountry": "FR"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "48.8571",
+      "longitude": "2.2934"
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Paris",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "15ème arrondissement"
+        }
+      }
+    ],
     "image": [
       `${siteUrl}/images/atelier-15eme-storefront.jpg`
     ],
+    "logo": `${siteUrl}/images/logo atelier du 15ème.webp`,
     "sameAs": [
       "https://www.instagram.com/atelier_du_15eme/"
     ],
@@ -126,6 +171,48 @@ export default function RootLayout({
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "13:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "14:00", "closes": "19:00" }
     ],
+    "priceRange": "€€",
+    "paymentAccepted": ["Cash", "Credit Card", "Debit Card"],
+    "currenciesAccepted": "EUR",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services optiques",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Lunettes de vue",
+            "description": "Lunettes de vue personnalisées"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Lunettes de soleil",
+            "description": "Lunettes de soleil avec protection UV"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Lentilles de contact",
+            "description": "Lentilles de contact confortables"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Verres progressifs",
+            "description": "Verres progressifs de qualité"
+          }
+        }
+      ]
+    },
+    "keywords": "opticien paris 15, opticien 15ème arrondissement, lunettes paris 15, opticien grenelle, opticien boulevard grenelle, atelier du 15ème, opticien créateur paris, lunetier paris 15, magasin lunettes paris 15ème, opticien paris 75015"
   };
   return (
     <html lang="fr">
