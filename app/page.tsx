@@ -96,7 +96,7 @@ export default function Home() {
           <section id="collections" className="py-16">
             <BlueTitle 
               title="Nos Collections"
-              subtitle="Nos lunettes de vue et de soleil à la fois tendance et créatrices"
+              subtitle="Nos lunettes de vue et de soleil à la fois tendances et créateurs"
             />
             <div className="container mx-auto px-4 mt-16">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -115,7 +115,7 @@ export default function Home() {
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2 wood-text drop-shadow">Lunettes de Vue</h3>
-                    <p className="text-neutral-300">Un large choix de lunettes tendance et créatrices.</p>
+                    <p className="text-neutral-300">Un large choix de lunettes tendances et créateurs.</p>
                   </div>
                 </a>
                 <a 
