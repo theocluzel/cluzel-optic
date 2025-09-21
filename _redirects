@@ -1,2 +1,12 @@
-# Redirection du sous-domaine Netlify vers le domaine principal
+# Force all Netlify domains to redirect to .fr
 fastidious-fox-d409c6.netlify.app/* https://atelierdu15eme.fr/:splat 301!
+atelierdu15eme.netlify.app/* https://atelierdu15eme.fr/:splat 301!
+
+# Force HTTPS and canonical domain
+http://atelierdu15eme.fr/* https://atelierdu15eme.fr/:splat 301!
+https://www.atelierdu15eme.fr/* https://atelierdu15eme.fr/:splat 301!
+
+# Canonical headers
+/*
+  X-Robots-Tag: index, follow
+  Link: <https://atelierdu15eme.fr/>; rel="canonical"

@@ -221,13 +221,21 @@ export default function RootLayout({
       <head>
         {/* Google Search Console verification */}
         <meta name="google-site-verification" content="nCvxACMAXGqsJXcTf1QtM6fSaNusyZCtJyRRpqULy-c" />
-                {/* Force canonical domain - MULTIPLE CANONICAL TAGS */}
+                {/* FORCE CANONICAL DOMAIN - AGGRESSIVE MODE */}
                 <link rel="canonical" href="https://atelierdu15eme.fr/" />
-                <link rel="canonical" href="https://atelierdu15eme.fr" />
                 <meta property="og:url" content="https://atelierdu15eme.fr/" />
                 <meta name="twitter:url" content="https://atelierdu15eme.fr/" />
-                {/* Prevent old domain indexing */}
-                <meta name="robots" content="noindex, nofollow" data-domain="fastidious-fox-d409c6.netlify.app" />
+                {/* Additional canonical signals */}
+                <meta name="original-source" content="https://atelierdu15eme.fr/" />
+                <meta name="canonical-url" content="https://atelierdu15eme.fr/" />
+                {/* Block old domain completely */}
+                <script dangerouslySetInnerHTML={{
+                  __html: `
+                    if (window.location.hostname.includes('netlify.app')) {
+                      window.location.replace('https://atelierdu15eme.fr' + window.location.pathname);
+                    }
+                  `
+                }} />
         {/* Prevent indexing of old subdomain */}
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       </head>
