@@ -17,11 +17,11 @@ export default function APropos() {
           {/* Intro visuelle */}
           <section className="container mx-auto px-4 mt-12">
             <div className="max-w-3xl mx-auto space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold wood-text drop-shadow">Rencontrez Hanna, Notre Experte en Optique</h2>
+              <h2 className="text-2xl md:text-3xl font-bold wood-text drop-shadow">À la rencontre d'Hanna, Opticienne lunetier</h2>
               <p className="text-neutral-300">
-                Nous sommes fier de vous présenter notre conseillère Hanna, une experte en optique dévouée à offrir des conseils personnalisés
-                pour répondre à vos besoins visuels uniques. Avec son expertise et son attention aux détails, Hanna est là pour vous guider dans le
-                choix des lunettes parfaites pour votre style et votre confort.
+                En poussant les portes de l'Atelier du 15ème vous aurez la chance de rencontrer Hanna, une opticienne passionnée par son métier. 
+                Elle saura vous faire découvrir son univers tout en vous offrant des conseils personnalisés pour répondre à vos besoins visuels uniques. 
+                Avec son expertise et son attention aux détails, Hanna est là pour vous guider dans le choix des lunettes parfaites pour votre style et votre confort.
               </p>
             </div>
           </section>
